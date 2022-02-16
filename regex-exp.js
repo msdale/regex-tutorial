@@ -13,35 +13,59 @@ console.log(rgx5.test("My favorite experience"));
 let rgx6 = new RegExp(/^[a-z0-9\\]*$/);
 console.log(rgx6.test("9\\"));*/
 
+
 // sample multiline text
-let str = "This is a string\nThis is another string";
+//let str = "This is a string\nThis is another string";
 // finds the first instance of "string"
-console.log(('(1) ' + str).replace(/string/, "blob"));
+//console.log(('(1) ' + str).replace(/string/, "blob"));
 // finds the last instance of "string" using anchor $
-console.log(('(2) ' + str).replace(/string$/, "blob"));
+//console.log(('(2) ' + str).replace(/string$/, "blob"));
 // finds the first instance of "string" using anchor $ and multiline flag
-console.log(('(3) ' + str).replace(/string$/m, "blob"));
+//console.log(('(3) ' + str).replace(/string$/m, "blob"));
 // finds both instances of "string" using anchor $, multiline flag, and global flag
-console.log(('(4) ' + str).replace(/string$/mg, "blob"));
+//console.log(('(4) ' + str).replace(/string$/mg, "blob"));
 // same as previous but uses mismatching case and ignore case flag
-console.log(('(5) ' + str).replace(/STRING$/mgi, "BLOB")); // finds first and last instance of "string"
+//console.log(('(5) ' + str).replace(/STRING$/mgi, "BLOB")); // finds first and last instance of "string"
 // replaces all text from first "string" and on due to Dot All (s) flag
-console.log(('(6) ' + str).replace(/STRING.*/mgis, "BLOB"));
+//console.log(('(6) ' + str).replace(/STRING.*/mgis, "BLOB"));
 
 // New sample multiline text
-str = "This is a string\nThis is another string with a unicode ✧ character";
+//str = "This is a string\nThis is another string with a unicode ✧ character";
 // does NOT find the unicode character...no changes made
-console.log(('(7) ' + str).replace(/\u{2727}/, "DIAMOND"));
+//console.log(('(7) ' + str).replace(/\u{2727}/, "DIAMOND"));
 // finds the unicode character with the help of the unicode (u) flag
-console.log(('(8) ' + str).replace(/\u{2727}/u, "DIAMOND"));
+//console.log(('(8) ' + str).replace(/\u{2727}/u, "DIAMOND"));
 
 // Sticky flag test...using same sample multiline text
-let rgx = new RegExp(/string/y);
+//let rgx = new RegExp(/string/y);
 // set search index (lastIndex) to 10...the position of the first instance of "string"
-rgx.lastIndex = 10;
-console.log(`(9) Search is ${rgx.test(str)}... Found at index 10 => ${str.substring(10)}`);
+//rgx.lastIndex = 10;
+//console.log(`(9) Search is ${rgx.test(str)}... Found at index 10 => ${str.substring(10)}`);
 // set search index (lastIndex) to 33...the position of the second instance of "string"
-rgx.lastIndex = 33;
-console.log(`(10) Search is ${rgx.test(str)}... Found at index 33 => ${str.substring(33)}`);
+//rgx.lastIndex = 33;
+//console.log(`(10) Search is ${rgx.test(str)}... Found at index 33 => ${str.substring(33)}`);
 
+//console.log('aCbbBBCCcc0_923AB62_A XYZ'.match(/^([a-zA-z0-9_]+) XYZ$/));
+//let x = 'The date was 1999-01-21'.match(/^.*(?<date>(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2}))$/);
+//console.log(x);
+//console.log(x.groups.year);
+//let x = `She cried, "Stop, you'll hurt him!".`.match(/(['"])(.*)\1/g);
+//console.log(x[0]);
+//console.log('abc def'.match(/[a-z]+ [a-z]+?/));
+//WORKS
+//let z = ' 10% of $100 '.match(/(\d+(?=%))%[a-zA-Z \\$]+?(\d+)/);
+//console.log(z);
+
+//let x = ' 10% of $100 '.match(/(\d+)%[a-zA-Z \\$]+?(\d+)/);
+//console.log(x);
+
+let x = "I want 20% of the $1000 winnings".match(/(\d+(?=%)).*((?<=\$)\d+)/).slice(1,3);
+console.log(`Amount asked for is $${x[0]*.01*x[1]}`); // prints $200
+ 
+//    let str = `<img class="wonder" id="mushroom">stuff</img>`;
+//    let x = str.match(/^<(?<tag>[a-z]+) *(?<attrs>[^<]+)*(?:>(?<text>.*)<\/\1>|\s+\/>)$/);
+//    console.log(x); // prints the regex result
+//    console.log(x.groups.tag); // prints 'img'
+//    console.log(x.groups.attrs); // prints 'class="wonder" id="mushroom"'
+//    console.log(x.groups.text); // prints 'stuff'
 
