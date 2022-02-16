@@ -1,17 +1,17 @@
-/*let rgx1 = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
-console.log(rgx1.test("msdaledad@gmail.com"));
-let rgx2 = new RegExp(/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/);
-console.log(rgx2.test("{}.{}.``@444.333.88.333"));
-let rgx3 = new RegExp(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/);
-console.log(rgx3.test("msdaledad@gmail.com"));
-let rgx4 = new RegExp(/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/);
-console.log(rgx4.test("http://yipee.com"));
-let rgx5 = new RegExp(/^My (best|worst) experience$/i);
-console.log(rgx5.test("My Worst experience"));
-console.log(rgx5.test("My Best experience"));
-console.log(rgx5.test("My favorite experience"));
-let rgx6 = new RegExp(/^[a-z0-9\\]*$/);
-console.log(rgx6.test("9\\"));*/
+//let rgx1 = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+//console.log(rgx1.test("msdaledad@gmail.com"));
+//let rgx2 = new RegExp(/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/);
+//console.log(rgx2.test("{}.{}.``@444.333.88.333"));
+//let rgx3 = new RegExp(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/);
+//console.log(rgx3.test("msdaledad@gmail.com"));
+//let rgx4 = new RegExp(/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/);
+//console.log(rgx4.test("http://yipee.com"));
+//let rgx5 = new RegExp(/^My (best|worst) experience$/i);
+//console.log(rgx5.test("My Worst experience"));
+//console.log(rgx5.test("My Best experience"));
+//console.log(rgx5.test("My favorite experience"));
+//let rgx6 = new RegExp(/^[a-z0-9\\]*$/);
+//console.log(rgx6.test("9\\"));
 
 
 // sample multiline text
@@ -59,13 +59,13 @@ console.log(rgx6.test("9\\"));*/
 //let x = ' 10% of $100 '.match(/(\d+)%[a-zA-Z \\$]+?(\d+)/);
 //console.log(x);
 
-let x = "I want 20% of the $1000 winnings".match(/(\d+(?=%)).*((?<=\$)\d+)/).slice(1,3);
-console.log(`Amount asked for is $${x[0]*.01*x[1]}`); // prints $200
- 
-//    let str = `<img class="wonder" id="mushroom">stuff</img>`;
-//    let x = str.match(/^<(?<tag>[a-z]+) *(?<attrs>[^<]+)*(?:>(?<text>.*)<\/\1>|\s+\/>)$/);
-//    console.log(x); // prints the regex result
-//    console.log(x.groups.tag); // prints 'img'
-//    console.log(x.groups.attrs); // prints 'class="wonder" id="mushroom"'
-//    console.log(x.groups.text); // prints 'stuff'
+//let x = "I want 20% of the $1000 winnings".match(/(\d+(?=%)).*((?<=\$)\d+)/).slice(1,3);
+//console.log(`Amount asked for is $${x[0]*.01*x[1]}`); // prints $200
+
+    let str = `<img class="wonder" id="mushroom">stuff</img>`;
+    let x = str.match(/^<(?<tag>[a-z]+) *(?<attrs>[^<]+)*(?:>(?<text>.*)<\/\1>|\s+\/>)$/);
+    console.log(x); // prints the regex result
+    console.log(x.groups.tag); // prints 'img'
+    console.log(x.groups.attrs); // prints 'class="wonder" id="mushroom"'
+    console.log(x.groups.text); // prints 'stuff'
 
